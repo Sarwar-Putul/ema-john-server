@@ -14,6 +14,11 @@ app.use(bodyParser.json());
 app.use(cors())
 
 
+app.get('/', (req, res) => {
+  res.send("It's working");
+})
+
+
 
 
 
@@ -71,4 +76,4 @@ client.connect(err => {
 
 
 
-app.listen(port)
+app.listen(process.env.PORT || port)
